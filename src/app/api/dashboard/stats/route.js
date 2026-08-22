@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { NextResponse } from "next/server";
 import { getCredentialsFromDb, saveCredentialsToDb } from "@/lib/mongodb";
 import { getValidAdminAccessToken } from "@/lib/shopifyTokenService";
