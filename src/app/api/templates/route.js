@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { NextResponse } from "next/server";
 import { getTemplates, createTemplate, updateTemplate, deleteTemplate, getTemplateById } from "@/lib/templatesDb";
 

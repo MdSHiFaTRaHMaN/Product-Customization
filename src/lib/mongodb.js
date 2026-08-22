@@ -2,27 +2,31 @@ import { MongoClient } from "mongodb";
 import fs from "fs";
 import path from "path";
 
-const uri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/shopify_customizer";
 const options = {};
 
-let client;
+function createClientPromise() {
+  const uri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/shopify_customizer";
+  try {
+    const client = new MongoClient(uri, options);
+    return client.connect().catch((err) => {
+      console.warn("[MongoDB] Connection warning:", err.message);
+      return null;
+    });
+  } catch (err) {
+    console.warn("[MongoDB] MongoClient initialization error (fallback active):", err.message);
+    return Promise.resolve(null);
+  }
+}
+
 let clientPromise;
 
 if (process.env.NODE_ENV === "development") {
   if (!global._mongoClientPromise) {
-    client = new MongoClient(uri, options);
-    global._mongoClientPromise = client.connect().catch((err) => {
-      console.warn("[MongoDB] Connection warning (using File-backed DB fallback):", err.message);
-      return null;
-    });
+    global._mongoClientPromise = createClientPromise();
   }
   clientPromise = global._mongoClientPromise;
 } else {
-  client = new MongoClient(uri, options);
-  clientPromise = client.connect().catch((err) => {
-    console.warn("[MongoDB] Connection warning:", err.message);
-    return null;
-  });
+  clientPromise = createClientPromise();
 }
 
 // Local File Database Fallback Path

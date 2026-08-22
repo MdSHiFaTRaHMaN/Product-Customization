@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { NextResponse } from "next/server";
 import { getProducts, getProductById, createProduct, updateProduct, deleteProduct } from "@/lib/productsDb";
 import { syncShopifyProducts } from "@/lib/shopifyProductSync";
