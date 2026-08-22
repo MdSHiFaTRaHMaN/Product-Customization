@@ -104,14 +104,12 @@ export default function ShopifyIntegrationPanel() {
             </span>
             <button
               onClick={() => setAppEmbedActive((a) => !a)}
-              className={`w-12 h-6 rounded-full transition-colors relative p-0.5 ${
-                appEmbedActive ? "bg-brand-500" : "bg-gray-300"
-              }`}
+              className={`w-12 h-6 rounded-full transition-colors relative p-0.5 ${appEmbedActive ? "bg-brand-500" : "bg-gray-300"
+                }`}
             >
               <div
-                className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                  appEmbedActive ? "translate-x-6" : "translate-x-0"
-                }`}
+                className={`w-5 h-5 bg-white rounded-full transition-transform ${appEmbedActive ? "translate-x-6" : "translate-x-0"
+                  }`}
               />
             </button>
           </div>
@@ -136,14 +134,12 @@ export default function ShopifyIntegrationPanel() {
             </span>
             <button
               onClick={() => setProxyEnabled((p) => !p)}
-              className={`w-12 h-6 rounded-full transition-colors relative p-0.5 ${
-                proxyEnabled ? "bg-brand-500" : "bg-gray-300"
-              }`}
+              className={`w-12 h-6 rounded-full transition-colors relative p-0.5 ${proxyEnabled ? "bg-brand-500" : "bg-gray-300"
+                }`}
             >
               <div
-                className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                  proxyEnabled ? "translate-x-6" : "translate-x-0"
-                }`}
+                className={`w-5 h-5 bg-white rounded-full transition-transform ${proxyEnabled ? "translate-x-6" : "translate-x-0"
+                  }`}
               />
             </button>
           </div>
@@ -166,14 +162,12 @@ export default function ShopifyIntegrationPanel() {
             </span>
             <button
               onClick={() => setGraphqlConnected((g) => !g)}
-              className={`w-12 h-6 rounded-full transition-colors relative p-0.5 ${
-                graphqlConnected ? "bg-brand-500" : "bg-gray-300"
-              }`}
+              className={`w-12 h-6 rounded-full transition-colors relative p-0.5 ${graphqlConnected ? "bg-brand-500" : "bg-gray-300"
+                }`}
             >
               <div
-                className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                  graphqlConnected ? "translate-x-6" : "translate-x-0"
-                }`}
+                className={`w-5 h-5 bg-white rounded-full transition-transform ${graphqlConnected ? "translate-x-6" : "translate-x-0"
+                  }`}
               />
             </button>
           </div>
@@ -195,28 +189,28 @@ export default function ShopifyIntegrationPanel() {
           <div className="p-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
             <span className="text-gray-400 font-bold block mb-1">App URL</span>
             <code className="text-brand-600 dark:text-brand-400 font-mono text-[11px] block select-all">
-              https://podcraft.shakildev.online
+              https://product-customization-tan.vercel.app
             </code>
           </div>
 
           <div className="p-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
             <span className="text-gray-400 font-bold block mb-1">Allowed Redirection URL(s)</span>
             <code className="text-brand-600 dark:text-brand-400 font-mono text-[11px] block select-all">
-              https://podcraft.shakildev.online/api/shopify/callback
+              https://product-customization-tan.vercel.app/api/shopify/callback
             </code>
           </div>
 
           <div className="p-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
             <span className="text-gray-400 font-bold block mb-1">App Proxy (Prefix: apps, Subpath: customizer)</span>
             <code className="text-brand-600 dark:text-brand-400 font-mono text-[11px] block select-all">
-              https://podcraft.shakildev.online/api/shopify/proxy
+              https://product-customization-tan.vercel.app/api/shopify/proxy
             </code>
           </div>
 
           <div className="p-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
             <span className="text-gray-400 font-bold block mb-1">Mandatory GDPR & Lifecycle Webhooks</span>
             <code className="text-emerald-600 dark:text-emerald-400 font-mono text-[11px] block select-all">
-              https://podcraft.shakildev.online/api/shopify/webhooks/*
+              https://product-customization-tan.vercel.app/api/shopify/webhooks/*
             </code>
           </div>
         </div>

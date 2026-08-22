@@ -81,7 +81,7 @@ export async function GET(req) {
       }
 
       // Redirect merchant straight to App Base Dashboard URL using native Shopify OAuth parameters
-      const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://podcraft.shakildev.online";
+      const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://product-customization-tan.vercel.app";
       return NextResponse.redirect(`${baseUrl}/?shop=${cleanShop}&installed=true`);
     } else {
       const errorText = await tokenResponse.text();

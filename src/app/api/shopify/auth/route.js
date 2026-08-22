@@ -22,7 +22,7 @@ export async function GET(req) {
     host = `${proto}://${req.headers.get("host")}`;
   }
   if (!host) {
-    host = "https://podcraft.shakildev.online";
+    host = "https://product-customization-tan.vercel.app";
   }
   const redirectUri = `${host}/api/shopify/callback`;
 
